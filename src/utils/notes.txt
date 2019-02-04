@@ -1,0 +1,7 @@
+
+Tutorials:
+https://fullstack-developer.academy/caching-http-requests-with-angular/
+https://www.concretepage.com/angular/angular-caching-http-interceptor
+
+Json request:
+https://jsonplaceholder.typicode.com/users
