@@ -13,16 +13,13 @@ export class CacheMapService implements Cache {
   constructor() { }
 
   get(req: HttpRequest<any>): HttpResponse<any> | null {
-    console.log("1");
     const entry = this.cacheMap.get(req.urlWithParams);
     if (!entry) {
       console.log(this.cacheMap);
       console.log(encodeURI(req.urlWithParams));
       return null;
     }
-    console.log("3");
     const isExpired = (Date.now() - entry.entryTime) > MAX_CACHE_AGE;
-    console.log("4");
     return isExpired ? null : entry.response;
   }
 
